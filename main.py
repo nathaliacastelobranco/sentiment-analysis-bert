@@ -31,6 +31,8 @@ def encode_sentence(sent):
 # Restore the trained model
 Dcnn_trained = tf.keras.models.load_model('./saved_model/sentiment-analysis-bert')
 
+# Benchmark
+
 # Prediction function
 def get_prediction(sentence):
   tokens = encode_sentence(sentence)
