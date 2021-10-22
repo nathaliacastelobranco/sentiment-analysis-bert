@@ -29,7 +29,7 @@ def encode_sentence(sent):
 
 
 # Restore the trained model
-Dcnn_trained = tf.keras.models.load_model('.\saved_model\sentiment-analysis-bert')
+Dcnn_trained = tf.keras.models.load_model('./saved_model/sentiment-analysis-bert')
 
 # Prediction function
 def get_prediction(sentence):
