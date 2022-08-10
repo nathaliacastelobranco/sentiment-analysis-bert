@@ -10,9 +10,9 @@ import matplotlib.pyplot as plt
 
 import tensorflow as tf 
 import tensorflow_hub as hub 
-from tensorflow.keras import layers 
+# from tf.keras import layers 
 import bert
-from tensorflow.keras.models import load_model
+# from tensorflow.keras.models import load_model
 
 
 # Import dataset
@@ -112,37 +112,37 @@ class DCNN(tf.keras.Model):
                name='dcnn'):
     super(DCNN, self).__init__(name=name)
 
-    self.embedding = layers.Embedding(vocab_size, emb_dim) 
+    self.embedding = tf.keras.layers.Embedding(vocab_size, emb_dim) 
 
     # Convolutional layers
-    self.bigram = layers.Conv1D(filters=nb_filters,
+    self.bigram = tf.keras.layers.Conv1D(filters=nb_filters,
                                 kernel_size=2,
                                 padding='valid',   
                                 activation='relu') 
 
-    self.trigram = layers.Conv1D(filters=nb_filters,
+    self.trigram = tf.keras.layers.Conv1D(filters=nb_filters,
                                 kernel_size=3,
                                 padding='valid',    
                                 activation='relu') 
 
-    self.fourgram = layers.Conv1D(filters=nb_filters,
+    self.fourgram = tf.keras.layers.Conv1D(filters=nb_filters,
                                 kernel_size=4,
                                 padding='valid',    
                                 activation='relu') 
     
     # Pooling layer
-    self.pool = layers.GlobalMaxPool1D() 
+    self.pool = tf.keras.layers.GlobalMaxPool1D() 
 
     # Dense layer
-    self.dense_1 = layers.Dense(units=FFN_units, activation='relu')
+    self.dense_1 = tf.keras.layers.Dense(units=FFN_units, activation='relu')
 
     # Dropout layer
-    self.dropout = layers.Dropout(rate=dropout_rate)
+    self.dropout = tf.keras.layers.Dropout(rate=dropout_rate)
 
     if nb_classes == 2:
-      self.last_dense = layers.Dense(units=1, activation='sigmoid') 
+      self.last_dense = tf.keras.layers.Dense(units=1, activation='sigmoid') 
     else:
-      self.last_dense = layers.Dense(units=nb_classes, activation='softmax')
+      self.last_dense = tf.keras.layers.Dense(units=nb_classes, activation='softmax')
 
 
   def call(self, inputs, training):

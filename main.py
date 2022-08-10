@@ -4,7 +4,7 @@ import re
 import tensorflow as tf 
 import tensorflow_hub as hub 
 import bert
-from tensorflow.keras.models import load_model
+# from tensorflow.keras.models import load_model
 
 # Tokenization phase
 '''
