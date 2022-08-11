@@ -8,7 +8,7 @@ st.write('O modelo possui acurácia de 82%.')
 
 user_input = st.text_input('Insira uma frase em inglês:')
 
-prediction_btn = st.button('Enviar', help='Descubra se sua frase é positiva ou negativa')
+prediction_btn = st.button('Enviar', help='Descubra se sua frase é positiva ou negativa.')
 # , on_click=get_prediction(user_input)
 
 if prediction_btn or user_input:
