@@ -2,8 +2,9 @@ import streamlit as st
 from main import get_prediction
 
 st.image('image.jpg', caption='Photo by @artbyhybrid from Unsplash')
-st.title('Análise de sentimentos com uso do algoritmo BERT\n')
-st.write('O objetivo deste projeto é identificar se uma frase em inglês representa um sentimento positivo ou negativo. O modelo possui acurácia de 82%.')
+st.title('Análise de sentimentos - BERT + CNN')
+st.write('O objetivo deste projeto é identificar se uma frase em inglês representa um sentimento positivo ou negativo.')
+st.write('O modelo possui acurácia de 82%.')
 
 user_input = st.text_input('Insira uma frase em inglês:')
 
