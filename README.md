@@ -23,5 +23,5 @@ pip install -r requirements.txt
 # Rode o app do streamlit
 streamlit run app.py
 ```
-
+Vídeo da demonstração do data app: https://youtu.be/Og9U-t2JlZ4
 ![Funcionamento do data app](https://user-images.githubusercontent.com/65196779/184050747-7547e262-8a01-4cc9-bcfa-6f992a3d4a72.gif)
